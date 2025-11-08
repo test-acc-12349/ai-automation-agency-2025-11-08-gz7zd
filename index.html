@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Automation Agency - Transform your business with AI-powered workflow automation and 24/7 operations">
+    <meta name="keywords" content="AI automation, workflow automation, business automation, AI agency">
+    <meta name="author" content="AI Automation Agency">
+    <title>AI Automation Agency - Automate Your Business with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .text-primary {
+            color: #FF5A5F;
+        }
+        .bg-primary {
+            background-color: #FF5A5F;
+        }
+        .text-secondary {
+            color: #1A1A1A;
+        }
+        .bg-secondary {
+            background-color: #1A1A1A;
+        }
+        .text-accent {
+            color: #FFD166;
+        }
+        .bg-accent {
+            background-color: #FFD166;
+        }
+        .hover-lift {
+            transition: all 300ms ease-in-out;
+        }
+        .hover-lift:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 9999px;
+            padding: 12px 32px;
+            font-weight: 600;
+            transition: all 300ms ease-in-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 90, 95, 0.3);
+        }
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 9999px;
+            padding: 12px 32px;
+            font-weight: 600;
+            transition: all 300ms ease-in-out;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-secondary:hover {
+            filter: brightness(0.95);
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 209, 102, 0.3);
+        }
+        .card-hover {
+            transition: all 300ms ease-in-out;
+            border-radius: 16px;
+        }
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        .faq-icon {
+            transition: transform 300ms ease-in-out;
+        }
+        .faq-answer {
+            max-height: 500px;
+            overflow: hidden;
+            transition: all 300ms ease-in-out;
+        }
+        .faq-answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .star-rating {
+            color: #FFD166;
+        }
+    </style>
+</head>
+<body class="bg-white text-secondary">
+    <!-- Header Navigation -->
+    <header class="sticky-header">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                    <i class="fas fa-robot text-white font-bold"></i>
+                </div>
+                <span class="font-bold text-xl text-secondary" style="font-family: 'Space Grotesk', sans-serif;">AI Automation</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-secondary hover:text-primary transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="text-secondary hover:text-primary transition-colors duration-300 font-medium">Benefits</a>
+                <a href="#faq" class="text-secondary hover:text-primary transition-colors duration-300 font-medium">FAQ</a>
+                <a href="#testimonials" class="text-secondary hover:text-primary transition-colors duration-300 font-medium">Testimonials</a>
+                <a href="mailto:admin@test.com" class="btn-primary">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden mobile-menu-button text-secondary hover:text-primary transition-colors duration-300 text-2xl" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 md:hidden">
+                <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-4">
+                    <a href="#features" class="text-secondary hover:text-primary transition-colors duration-300 font-medium py-2">Features</a>
+                    <a href="#benefits" class="text-secondary hover:text-primary transition-colors duration-300 font-medium py-2">Benefits</a>
+                    <a href="#faq" class="text-secondary hover:text-primary transition-colors duration-300 font-medium py-2">FAQ</a>
+                    <a href="#testimonials" class="text-secondary hover:text-primary transition-colors duration-300 font-medium py-2">Testimonials</a>
+                    <a href="mailto:admin@test.com" class="btn-primary text-center">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-white via-gray-50 to-white py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full opacity-10 blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#FF5A5F] to-[#FFD166] rounded-full opacity-10 blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="flex flex-col gap-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                        We automate your business with <span class="text-primary">AI</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+                        Transform your operations with cutting-edge AI-powered automation. Eliminate manual processes, reduce errors, and scale your business faster than ever before. Our intelligent solutions work 24/7 to keep your business running smoothly.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://test.com" class="btn-primary text-center md:text-left">
+                            <i class="fas fa-rocket mr-2"></i>Start Automating Now
+                        </a>
+                        <a href="#features" class="btn-secondary text-center md:text-left">
+                            <i class="fas fa-arrow-down mr-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-2xl blur-2xl opacity-20"></div>
+                        <div class="relative bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-2xl p-1">
+                            <div class="bg-white rounded-2xl p-8 flex flex-col items-center justify-center gap-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center">
+                                    <i class="fas fa-brain text-white text-4xl"></i>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-2xl font-bold text-secondary">AI-Powered</p>
+                                    <p class="text-gray-600 font-light">Automation</p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 w-full">
+                                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                        <p class="text-primary font-bold text-lg">24/7</p>
+                                        <p class="text-xs text-gray-600 font-light">Operations</p>
+                                    </div>
+                                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                        <p class="text-primary font-bold text-lg">100%</p>
+                                        <p class="text-xs text-gray-600 font-light">Uptime</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                    Powerful Features Built for <span class="text-primary">Scale</span>
+                </h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Our comprehensive suite of AI-powered tools gives you everything you need to automate your entire business workflow
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white border border-gray-100 p-8 rounded-2xl">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                        AI-Powered Workflow Automation
+                    </h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-4">
+                        Automate repetitive tasks and complex workflows with our intelligent AI engine. Our system learns your business processes and optimizes them continuously, eliminating manual work and reducing human error by up to 95%.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Intelligent process mapping</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Real-time error detection</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Multi-system integration</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white border border-gray-100 p-8 rounded-2xl">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                        24/7 Operations
+                    </h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-4">
+                        Your business never sleeps with our always-on AI operations. Monitor, process, and respond to tasks round the clock without any downtime. Our redundant infrastructure ensures 99.99% uptime and instant failover capabilities.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Round-the-clock monitoring</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Instant notifications</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Automatic escalation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white border border-gray-100 p-8 rounded-2xl">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                        Advanced Analytics & Insights
+                    </h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-4">
+                        Gain deep insights into your automated processes with comprehensive analytics dashboards. Track performance metrics, identify bottlenecks, and make data-driven decisions to continuously improve your operations.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Real-time dashboards</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Predictive analytics</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span>Custom reports</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                    Transform Your Business with <span class="text-primary">Real Results</span>
+                </h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Experience measurable improvements across every aspect of your operations
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Benefit 1: Save Time -->
+                <div class="hover-lift bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-hourglass-end text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                                Save Time
+                            </h3>
+                            <p class="text-gray-600 font-light leading-relaxed mb-4">
+                                Reclaim up to 40 hours per week by automating routine tasks. Our AI handles data entry, scheduling, and processing faster and more accurately than manual work ever could.
+                            </p>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-secondary font-semibold mb-2">Key Metrics:</p>
+                                <ul class="space-y-1 text-sm text-gray-600 font-light">
+                                    <li>⚡ 90% reduction in task completion time</li>
+                                    <li>⚡ Instant processing of high-volume requests</li>
+                                    <li>⚡ Eliminate bottlenecks instantly</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Cut Costs -->
+                <div class="hover-lift bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-wallet text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                                Cut Costs
+                            </h3>
+                            <p class="text-gray-600 font-light leading-relaxed mb-4">
+                                Reduce operational expenses by 60% through intelligent automation. Minimize errors that cost money, reduce labor costs, and optimize resource allocation across your entire organization.
+                            </p>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-secondary font-semibold mb-2">Cost Savings:</p>
+                                <ul class="space-y-1 text-sm text-gray-600 font-light">
+                                    <li>💰 Reduce operational expenses significantly</li>
+                                    <li>💰 Minimize costly human errors</li>
+                                    <li>💰 Optimize staffing requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Scale Fast -->
+                <div class="hover-lift bg-white rounded-2xl p-8 border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-rocket text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary mb-2 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                                Scale Fast
+                            </h3>
+                            <p class="text-gray-600 font-light leading-relaxed mb-4">
+                                Grow your business without proportional increases in overhead. Our AI scales with you, handling 10x more volume without additional resources or complexity.
+                            </p>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-secondary font-semibold mb-2">Growth Benefits:</p>
+                                <ul class="space-y-1 text-sm text-gray-600 font-light">
+                                    <li>📈 Handle exponential growth effortlessly</li>
+                                    <li>📈 Maintain quality at scale</li>
+                                    <li>📈 Rapid deployment to new markets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Background -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop'); opacity: 0.15;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1A1A1A] via-[#1A1A1A] to-[#1A1A1A] opacity-85"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                Ready to Transform Your Business?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+                Join hundreds of companies already using AI automation to streamline their operations, reduce costs, and accelerate growth. Get started today and see results within the first week.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://test.com" class="btn-primary inline-flex items-center justify-center">
+                    <i class="fas fa-play mr-2"></i>Start Your Free Trial
+                </a>
+                <a href="mailto:admin@test.com" class="btn-secondary inline-flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>Schedule a Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                    About <span class="text-primary">AI Automation Agency</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div>
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-2xl blur-2xl opacity-20"></div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="AI Automation Agency Team" class="relative rounded-2xl shadow-lg w-full h-auto">
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 font-light leading-relaxed">
+                        Founded in 2020 by a team of AI researchers and automation experts, AI Automation Agency was born from a simple vision: to make enterprise-grade AI automation accessible to businesses of all sizes. Our founders recognized that most companies were spending countless hours on repetitive tasks that could be eliminated with intelligent automation. Starting as a small consulting firm, we've grown into a leading provider of AI-powered automation solutions, serving over 500 clients across multiple industries and generating combined savings of over $50 million for our customers.
+                    </p>
+                    <p class="text-lg text-gray-700 font-light leading-relaxed">
+                        Our mission is to empower businesses to achieve more with less by leveraging cutting-edge artificial intelligence and machine learning technologies. We believe that automation should be intelligent, intuitive, and accessible to everyone. Our core values—innovation, reliability, and customer success—guide every decision we make. We're committed to continuously evolving our platform, staying at the forefront of AI technology, and providing exceptional support to help our clients succeed in an increasingly competitive digital landscape.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg p-6">
+                            <p class="text-3xl font-bold text-white mb-1">500+</p>
+                            <p class="text-white font-light">Active Clients</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-[#FFD166] to-[#FF5A5F] rounded-lg p-6">
+                            <p class="text-3xl font-bold text-white mb-1">$50M+</p>
+                            <p class="text-white font-light">Saved for Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                    What Our Clients <span class="text-primary">Say</span>
+                </h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Real success stories from businesses that transformed their operations with our AI automation solutions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-6">
+                        "AI Automation Agency completely transformed our customer service operations. We reduced response times by 80% and our team can now focus on complex issues instead of repetitive tasks. The ROI was immediate and substantial."
+                    </p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <p class="font-semibold text-secondary">Sarah Chen</p>
+                        <p class="text-sm text-gray-600 font-light">Director of Operations, TechFlow Inc.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-6">
+                        "The implementation was seamless and the support team was exceptional. We've eliminated manual data entry entirely and our data accuracy improved from 94% to 99.8%. This is a game-changer for our finance department."
+                    </p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <p class="font-semibold text-secondary">Michael Rodriguez</p>
+                        <p class="text-sm text-gray-600 font-light">CFO, Global Finance Solutions</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-6">
+                        "We scaled our operations 5x without adding headcount. The AI handles everything from lead qualification to invoice processing. Our team productivity is through the roof and we're processing 10x more volume with the same resources."
+                    </p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <p class="font-semibold text-secondary">Jessica Williams</p>
+                        <p class="text-sm text-gray-600 font-light">VP Sales, CloudScale Corp</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 font-light leading-relaxed mb-6">
+                        "Implementing AI automation was the best decision we made this year. We cut operational costs by 45% in the first quarter alone. The system is intelligent, easy to manage, and the analytics help us continuously optimize our processes."
+                    </p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <p class="font-semibold text-secondary">David Thompson</p>
+                        <p class="text-sm text-gray-600 font-light">Operations Manager, RetailMax</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                    Frequently Asked <span class="text-primary">Questions</span>
+                </h2>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Everything you need to know about our AI automation solutions
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-2xl overflow-hidden hover-lift">
+                    <button class="faq-question w-full px-6 md:px-8 py-6 flex items-center justify-between cursor-pointer transition-all duration-300 hover:bg-gray-50">
+                        <h3 class="text-lg font-semibold text-secondary text-left" style="font-family: 'Space Grotesk', sans-serif;">
+                            How long does implementation typically take?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 md:px-8 pb-6 border-t border-gray-100">
+                        <p class="text-gray-700 font-light leading-relaxed">
+                            Most implementations are completed within 2-4 weeks, depending on the complexity of your workflows and the number of systems we need to integrate. Our team works closely with your organization to ensure a smooth transition. We provide comprehensive training, detailed documentation, and ongoing support throughout the implementation process. For simpler use cases, we can have you up and running in as little as 1 week. We also offer accelerated implementation programs for clients with urgent needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-2xl overflow-hidden hover-lift">
+                    <button class="faq-question w-full px-6 md:px-8 py-6 flex items-center justify-between cursor-pointer transition-all duration-300 hover:bg-gray-50">
+                        <h3 class="text-lg font-semibold text-secondary text-left" style="font-family: 'Space Grotesk', sans-serif;">
+                            What systems can your AI integrate with?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 md:px-8 pb-6 border-t border-gray-100">
+                        <p class="text-gray-700 font-light leading-relaxed mb-4">
+                            Our platform integrates with virtually any business system including:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 font-light mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>CRM systems (Salesforce, HubSpot, Pipedrive)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>ERP platforms (SAP, Oracle, NetSuite)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Accounting software (QuickBooks, Xero, FreshBooks)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Email and communication platforms</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Custom APIs and legacy systems</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 font-light">
+                            If you have a specific system you need integrated, our technical team can build a custom connector for you.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-2xl overflow-hidden hover-lift">
+                    <button class="faq-question w-full px-6 md:px-8 py-6 flex items-center justify-between cursor-pointer transition-all duration-300 hover:bg-gray-50">
+                        <h3 class="text-lg font-semibold text-secondary text-left" style="font-family: 'Space Grotesk', sans-serif;">
+                            Is my data secure and compliant with regulations?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 md:px-8 pb-6 border-t border-gray-100">
+                        <p class="text-gray-700 font-light leading-relaxed mb-4">
+                            Security and compliance are our top priorities. We maintain:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 font-light mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>SOC 2 Type II certification</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>GDPR and CCPA compliance</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>HIPAA compliance for healthcare clients</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>End-to-end encryption for all data</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Regular security audits and penetration testing</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 font-light">
+                            All data is encrypted in transit and at rest. We use enterprise-grade security infrastructure with multiple redundancy layers and automatic backups.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-2xl overflow-hidden hover-lift">
+                    <button class="faq-question w-full px-6 md:px-8 py-6 flex items-center justify-between cursor-pointer transition-all duration-300 hover:bg-gray-50">
+                        <h3 class="text-lg font-semibold text-secondary text-left" style="font-family: 'Space Grotesk', sans-serif;">
+                            What kind of support do you provide?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 md:px-8 pb-6 border-t border-gray-100">
+                        <p class="text-gray-700 font-light leading-relaxed mb-4">
+                            We provide comprehensive support across all tiers:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 font-light mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>24/7 technical support via chat, email, and phone</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Dedicated account manager for enterprise clients</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Comprehensive onboarding and training programs</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Regular optimization reviews and recommendations</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Priority response times (1-hour SLA for critical issues)</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 font-light">
+                            Our support team consists of AI and automation experts who can help you maximize the value of your automation investment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white border border-gray-100 rounded-2xl overflow-hidden hover-lift">
+                    <button class="faq-question w-full px-6 md:px-8 py-6 flex items-center justify-between cursor-pointer transition-all duration-300 hover:bg-gray-50">
+                        <h3 class="text-lg font-semibold text-secondary text-left" style="font-family: 'Space Grotesk', sans-serif;">
+                            What's the typical ROI and when will I see results?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 md:px-8 pb-6 border-t border-gray-100">
+                        <p class="text-gray-700 font-light leading-relaxed mb-4">
+                            Most of our clients see measurable results within the first 30 days:
+                        </p>
+                        <ul class="space-y-2 text-gray-700 font-light mb-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Average time savings: 40+ hours per week per team</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Average cost reduction: 45-60% of targeted processes</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Typical ROI payback period: 3-6 months</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-primary"></i>
+                                <span>Year-one ROI: 200-400% depending on use case</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-700 font-light">
+                            We provide detailed ROI projections during the discovery phase and track actual results throughout implementation. Most clients report exceeding their initial projections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 md:py-20 bg-gradient-to-r from-[#FF5A5F] to-[#FFD166]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight" style="font-family: 'Space Grotesk', sans-serif;">
+                Stop Wasting Time on Manual Tasks
+            </h2>
+            <p class="text-lg md:text-xl text-white font-light mb-8 max-w-2xl mx-auto leading-relaxed opacity-95">
+                Join the automation revolution and let AI handle the repetitive work. Your team will focus on what really matters.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://test.com" class="bg-white text-primary px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center justify-center">
+                    <i class="fas fa-check mr-2"></i>Get Started Now
+                </a>
+                <a href="mailto:admin@test.com" class="bg-white bg-opacity-20 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-opacity-30 hover:scale-105 inline-flex items-center justify-center border border-white">
+                    <i class="fas fa-question-circle mr-2"></i>Ask a Question
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-[#FF5A5F] to-[#FFD166] rounded-lg flex items-center justify-center">
+                            <i class="fas fa-robot text-white font-bold"></i>
+                        </div>
+                        <span class="font-bold text-lg" style="font-family: 'Space Grotesk', sans-serif;">AI Automation</span>
+                    </div>
+                    <p class="text-gray-300 font-light text-sm leading-relaxed">
+                        Transforming businesses with intelligent AI automation solutions.
+                    </p>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg" style="font-family: 'Space Grotesk', sans-serif;">Product</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#features" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#faq" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">FAQ</a></li>
+                        <li><a href="#testimonials" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg" style="font-family: 'Space Grotesk', sans-serif;">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="blog.html" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="mailto:admin@test.com" class="text-gray-300 font-light hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg" style="font-family: 'Space Grotesk', sans-serif;">Connect</h4>
+                    <p class="text-gray-300 font-light text-sm mb-4">
+                        <i class="fas fa-envelope text-primary mr-2"></i>
+                        <a href="mailto:admin@test.com" class="hover:text-primary transition-colors duration-300">admin@test.com</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 font-light text-sm">
+                    &copy; 2025 AI Automation Agency. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="privacy.html" class="text-gray-400 font-light hover:text-primary transition-colors duration-300">Privacy</a>
+                    <a href="terms.html" class="text-gray-400 font-light hover:text-primary transition-colors duration-300">Terms</a>
+                    <a href="blog.html" class="text-gray-400 font-light hover:text-primary transition-colors duration-300">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
